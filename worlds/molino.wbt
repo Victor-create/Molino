@@ -1,14 +1,174 @@
 #VRML_SIM R2019a utf8
 WorldInfo {
-  info [
-  ]
 }
 Viewpoint {
-  orientation -0.7 0.7 0.2 0.75
-  position 1.2 1.6 2.3
-
+  orientation -0.27785500266264007 0.9072528505242412 0.3157354315102808 1.774616947108132
+  position 0.8408904535168997 1.1014458198660206 -0.08026124216099828
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
+}
+Floor {
+}
+Group {
+  children [
+    Transform {
+      translation 0 0.025 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.8 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.30000000000000004 0.049999999999999996 0.4
+          }
+        }
+        Solid {
+          rotation 0 1 0 1.5708
+          children [
+            HingeJoint {
+              jointParameters HingeJointParameters {
+                position -14.021446977007855
+                axis 0 1 0
+              }
+              endPoint Solid {
+                translation -2.7254450565729376e-08 0.2699686117044155 -1.9386522652813365e-08
+                rotation 2.047474509920186e-07 0.9999999999997068 -7.378934597685008e-07 4.828495269361967
+                children [
+                  Shape {
+                    appearance PBRAppearance {
+                      roughness 1
+                      metalness 0
+                    }
+                    geometry Cylinder {
+                      height 0.5
+                      radius 0.04
+                    }
+                  }
+                  HingeJoint {
+                    jointParameters HingeJointParameters {
+                      position -37.922334348093955
+                      anchor 0.048 0.19 0
+                    }
+                    endPoint Solid {
+                      translation 0.044 0.1874268647907683 -0.011043770982159614
+                      rotation 1 0 0 2.824384534864866
+                      children [
+                        DEF Molino Shape {
+                          appearance PBRAppearance {
+                            baseColor 0.9372549019607843 0.1607843137254902 0.1607843137254902
+                            roughness 1
+                            metalness 0
+                          }
+                          geometry Box {
+                            size 0.01 0.5 0.060000000000000005
+                          }
+                        }
+                        Solid {
+                          rotation 1 0 0 1.5708
+                          children [
+                            USE Molino
+                          ]
+                        }
+                        HingeJoint {
+                          jointParameters HingeJointParameters {
+                            position 32.146207056244634
+                            axis 0 1 0
+                            anchor 0 0.26 0
+                          }
+                          endPoint Solid {
+                            translation 0 0.26 0
+                            rotation 0 -1 0 5.552904786832885
+                            children [
+                              DEF elice2_1 Shape {
+                                geometry Box {
+                                  size 0.03 0.019999999999999997 0.060000000000000005
+                                }
+                              }
+                            ]
+                            name "solid(1)"
+                            physics Physics {
+                            }
+                            linearVelocity -0.014609370652698215 -0.06773585606126686 -0.22177710344320664
+                            angularVelocity 0.887014608382609 -0.36965058244357046 0.08382568764445136
+                          }
+                        }
+                        HingeJoint {
+                          jointParameters HingeJointParameters {
+                            position 0.1520359828472846
+                            axis 0 1 0
+                            anchor 0 -0.26 0
+                          }
+                          endPoint Solid {
+                            translation 0 -0.26 0
+                            rotation 0 1 0 0.15203598284728567
+                            children [
+                              USE elice2_1
+                            ]
+                            name "solid(2)"
+                            physics Physics {
+                            }
+                            linearVelocity 0.009703745293922816 0.0868816971311942 0.2052081804031781
+                            angularVelocity 0.8702171461043591 0.016426357294630968 -0.055573934838298235
+                          }
+                        }
+                        HingeJoint {
+                          jointParameters HingeJointParameters {
+                            position 0.06758648554522245
+                            axis 0 0 1
+                            anchor 0 0 0.26
+                          }
+                          endPoint Solid {
+                            translation 0 0 0.26
+                            rotation 0.9988591060437112 0.033767543234546685 0.03376742953588532 1.571941238920678
+                            children [
+                              USE elice2_1
+                            ]
+                            name "solid(3)"
+                            physics Physics {
+                            }
+                            linearVelocity -0.04438478985340183 0.22304195608249092 -0.08132342645244696
+                            angularVelocity 0.8602295194757348 0.12039275576713614 -0.1423060458649915
+                          }
+                        }
+                        HingeJoint {
+                          jointParameters HingeJointParameters {
+                            position 0.06781327856642012
+                            axis 0 0 1
+                            anchor 0 0 -0.26
+                          }
+                          endPoint Solid {
+                            translation 0 0 -0.26
+                            rotation 0.9988514441241555 0.03388068036511421 0.03388055591465476 1.5719492157162362
+                            children [
+                              USE elice2_1
+                            ]
+                            name "solid(4)"
+                            physics Physics {
+                            }
+                          }
+                        }
+                      ]
+                      name "solid(1)"
+                      physics Physics {
+                      }
+                      linearVelocity -0.002452807157639764 0.009572891232176951 -0.008284469926094775
+                      angularVelocity 0.8651762990789825 0.1360034622257621 -0.09901436388188
+                    }
+                  }
+                ]
+                physics Physics {
+                }
+                linearVelocity -1.6770570791657697e-07 8.480328472729204e-07 3.256686985793854e-07
+                angularVelocity 1.6134267349371673e-07 0.13571761400349122 -4.813249634457991e-08
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
